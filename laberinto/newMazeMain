@@ -1,0 +1,57 @@
+from laberinto2 import mapa
+
+class Node:
+    ListaFrontera=[]
+    def __init__(self, posx, posy, clave):
+        self.clave = clave
+        self.posx = posx
+        self.posy = posy
+        
+
+    def getposx(self):
+         return self.posx
+    def getposy(self):
+         return self.posy
+    def getfrontX(self):
+         return self.fronteraX
+    def getfrontY(self):
+         return self.fronteraY
+    def getNombre(self):
+         return self.clave
+    
+altoMapa=len(mapa)
+anchoMapa=len(mapa[1])
+
+def escanearPuntos(salida, final):
+     global salidax, saliday, finalx, finaly
+     for i in range(len(mapa)):  
+        for j in range(len(mapa[i])):
+             if mapa[i][j]==salida:
+                    saliday=i
+                    salidax=j
+     for i in range(len(mapa)):  
+        for j in range(len(mapa[i])):
+            if mapa[i][j]==final:
+                    finalx=j
+                    finaly=i
+escanearPuntos("A","B")
+
+
+                    
+
+def asignarValores():
+          for i in anchoMapa:
+               for j in altoMapa:
+                    cont+=1
+                    clave =Node(i,j,cont)
+
+
+
+
+
+while cont < MAX_ITERACIONES:
+#-escanear frontera
+#-Hay casilla/s libre/s?
+#si si: mover a una aleatoriamente
+#si no: ir a la ultima casilla con casillas disponibles
+
