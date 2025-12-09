@@ -2,7 +2,7 @@ from laberinto2 import mapa
 import random
 import time
 import sys
-import os  # <-- para limpiar la consola
+import os 
 
 fronterax = []
 fronteray = []
@@ -106,7 +106,7 @@ while cont < MAX_ITERACIONES:
                  recorrerFronteras()
 
     mostrarmapa()
-    time.sleep(0.2)  # <-- añade retraso entre pasos (ajusta el tiempo si quieres)
+    time.sleep(0.2)  
     if f"celda{cont}" in celdas:
         if celdas[f"celda{cont}"].posx ==final.posx and celdas[f"celda{cont}"].posy ==final.posy:
             print("SOLUCION ENCONTRADA")
